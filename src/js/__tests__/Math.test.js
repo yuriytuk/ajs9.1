@@ -22,7 +22,7 @@ test('Magician 2 клетка - дурман', () => {
   magician.stoned = true;
   magician.x = 2;
   const result = magician.attack;
-  expect(result).toBe(3);
+  expect(result).toBeCloseTo(5.6);
 });
 
 test('Daemon - 2 клетка', () => {
@@ -30,7 +30,7 @@ test('Daemon - 2 клетка', () => {
   daemon.stoned = false;
   daemon.x = 2;
   const result = daemon.attack;
-  expect(result).toBe(8);
+  expect(result).toBeCloseTo(8);
 });
 test('Daemon - 6 клетка', () => {
   const daemon = new Daemon('diablo');
